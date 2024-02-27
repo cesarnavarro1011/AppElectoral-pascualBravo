@@ -1,12 +1,9 @@
-import { AspectRatio, Box, Image, NativeBaseProvider, Switch } from "native-base";
-import { logo } from '../../assets/logo_electoral_2023.png';
+import { AspectRatio, Box, HStack, Image, NativeBaseProvider, Switch } from "native-base";
 
 export default function Home() {
   return (
-    <Box>
-        <AspectRatio w="100%" ratio={12 / 9}>
-          <Image source={require(logo)} alt="image" />
-        </AspectRatio>
-    </Box>
+    <HStack space={3} justifyContent="center">
+      <Image size="xl" source={require('../../assets/logo_elecciones_2023.png')} alt="image" />
+    </HStack>
   );  
 }
