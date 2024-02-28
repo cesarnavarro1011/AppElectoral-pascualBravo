@@ -1,12 +1,12 @@
-import React, {useState, useEffect} from 'react';
 import { AspectRatio, Badge, Box, Center, Container, Flex, HStack, Heading, Image, Stack, Text, VStack, Button } from "native-base";
 import { SafeAreaView } from 'react-native';
 
 export default function Winner({ navigation }) {
   return (
-    <Stack justifyContent="center">
+    <Stack alignItems="center">
     <SafeAreaView/>
-    <Container maxWidth={80} width={{ base: 178, lg: 250 }} m={1} rounded="lg" overflow="hidden" borderColor="coolGray.200" borderWidth="1" _dark={{
+    <Text mt={32} mb={5} fontSize={20} fontWeight='semibold'>GANADOR!</Text>
+    <Container maxWidth={80} width={{ base: 230, lg: 250 }} rounded="lg" overflow="hidden" borderColor="coolGray.200" borderWidth="1" _dark={{
       borderColor: "coolGray.600",
       backgroundColor: "gray.700"
     }} _web={{
@@ -28,6 +28,9 @@ export default function Winner({ navigation }) {
         <Heading size="sm" ml="-1">
           candidato
         </Heading>
+        <Text fontSize="xs" _light={{ color:'q'}} _dark={{ color: "violet.400" }} fontWeight="600" ml="-0.5" mt="-1" mb="1">
+          partido
+        </Text>
       </Stack>
     </Stack>
   </Container>

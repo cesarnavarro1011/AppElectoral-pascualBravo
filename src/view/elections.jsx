@@ -1,5 +1,6 @@
-import { Flex, Stack, View } from "native-base"
+import { Box, Flex, Stack, View } from "native-base"
 import Card from "../components/card";
+import { SafeAreaView } from "react-native";
 
 export default function Elections() {
 
@@ -10,7 +11,9 @@ export default function Elections() {
     { key: '04', name: 'milena cabarcas', candidate: 'Fuerza Ciudadana', photo: 'photo.png', color: 'warning.500'},
   ]
   return (
-    <Stack w="100%" height="auto" flexDirection="row" flexWrap="wrap" overflow="hidden" >{
+    <Box>
+    <SafeAreaView/>
+    <Stack mt={10} w="100%" height="auto" flexDirection="row" flexWrap="wrap" overflow="hidden" >{
       candidates.map((candidate) => (
         <Card key={candidate.key} 
             nameCandidate={candidate.name} 
@@ -18,5 +21,6 @@ export default function Elections() {
             color={candidate.color}
         />))
     }</Stack>
+    </Box>
   );  
 } 

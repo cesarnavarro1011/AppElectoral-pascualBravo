@@ -5,7 +5,6 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Elections from './src/view/elections';
 import 'react-native-gesture-handler';
 import Home from './src/view/home';
-
 import { createStackNavigator } from '@react-navigation/stack';
 import Winner from './src/view/Winner';
 
@@ -18,7 +17,7 @@ const headerShown = () => ({
 function MyStack() {
   return (
     <Stack.Navigator
-      initialRouteName='winner'>
+      initialRouteName='Home'>
       <Stack.Screen 
         name="Home" 
         component={Home} 
@@ -28,7 +27,6 @@ function MyStack() {
         name="elections" 
         component={Elections}
         options = {headerShown}
-
       />
       <Stack.Screen 
         name="winner" 

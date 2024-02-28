@@ -8,7 +8,7 @@ export default function Card(props) {
 
   return (
     <TouchableOpacity onPress = {() => setVoteCount(voteCount + 1)}>
-    <Container maxWidth={80} width={{ base: 178, lg: 200 }} m={1} rounded="lg" overflow="hidden" borderColor="coolGray.200" borderWidth="1" _dark={{
+    <Container maxWidth={80} width={{ base: 178, lg: 200 }} m={1} mt={5} rounded="lg" overflow="hidden" borderColor="coolGray.200" borderWidth="1" _dark={{
       borderColor: "coolGray.600",
       backgroundColor: "gray.700"
     }} _web={{
