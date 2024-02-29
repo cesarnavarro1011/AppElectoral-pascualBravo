@@ -2,7 +2,7 @@ import { Box, Flex, Stack, View } from "native-base"
 import Card from "../components/card";
 import { SafeAreaView } from "react-native";
 
-export default function Elections() {
+export default function Elections({ navigation }) {
 
   const candidates = [
     { key: '01', name: 'El mono Martinez', candidate: 'Polo', photo: 'photo.png', color: 'yellow.500'},
@@ -19,6 +19,11 @@ export default function Elections() {
             nameCandidate={candidate.name} 
             candidate={candidate.candidate} 
             color={candidate.color}
+            onPress={() => {
+              navigation.navigate('Voted',{
+                candidate
+              })
+            }}   
         />))
     }</Stack>
     </Box>

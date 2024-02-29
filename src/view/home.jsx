@@ -6,6 +6,7 @@ export default function Home({ navigation }) {
 
   const [formData, setData] = React.useState({});
   const [errors, setErrors] = React.useState({});
+  const [clearInterval, setInterval] = React.useState({});
 
   const validate = () => {
       
@@ -31,14 +32,9 @@ export default function Home({ navigation }) {
     };
 
     const onSubmit = () => {
-        validate() ? navigation.navigate('elections') : console.log('Validation Failed');
+        validate() ? navigation.navigate('Elections') : console.log('Validation Failed');
       };
 
-      // useEffect(() => {
-      //   return onSubmit = () => {
-      //     validate() ? navigation.navigate('elections') : console.log('Validation Failed');
-      //   };
-      // }, [validate,1000]);
 
   return (
     <Box alignItems="center" mt={16}>

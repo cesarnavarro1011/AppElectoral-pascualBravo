@@ -7,6 +7,7 @@ import 'react-native-gesture-handler';
 import Home from './src/view/home';
 import { createStackNavigator } from '@react-navigation/stack';
 import Winner from './src/view/Winner';
+import Voted from './src/view/voted';
 
 const Stack = createStackNavigator();
 
@@ -24,15 +25,19 @@ function MyStack() {
         options = {headerShown}
       />
       <Stack.Screen 
-        name="elections" 
+        name="Elections" 
         component={Elections}
         options = {headerShown}
       />
       <Stack.Screen 
-        name="winner" 
+        name="Voted" 
+        component={Voted}
+        options = {headerShown}
+      />
+      <Stack.Screen 
+        name="Winner" 
         component={Winner} 
         options = {headerShown}
-
       />
     </Stack.Navigator>
   );

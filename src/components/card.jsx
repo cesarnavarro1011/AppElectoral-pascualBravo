@@ -3,11 +3,11 @@ import { AspectRatio, Badge, Box, Center, Container, Flex, HStack, Heading, Imag
 import { TouchableOpacity } from 'react-native';
 
 export default function Card(props) {
-  const { nameCandidate, candidate, color } = props 
+  const { nameCandidate, candidate, color, onPress } = props 
   const [voteCount, setVoteCount] = useState(0);
 
   return (
-    <TouchableOpacity onPress = {() => setVoteCount(voteCount + 1)}>
+    <TouchableOpacity onPress = {() => setVoteCount(onPress,voteCount + 1)}>
     <Container maxWidth={80} width={{ base: 178, lg: 200 }} m={1} mt={5} rounded="lg" overflow="hidden" borderColor="coolGray.200" borderWidth="1" _dark={{
       borderColor: "coolGray.600",
       backgroundColor: "gray.700"
